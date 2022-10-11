@@ -1,4 +1,5 @@
 @import '../styles/variables';
+@import '../styles/landing-page';
 
 html,
 body {
@@ -7,7 +8,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: $base-text;
-  background-color: $base-background;
 }
 
 a {
@@ -17,4 +17,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+header {
+  background-color: #FFFF;;
+}
+
+main {
+  min-height: 100vh;
+}
+
+footer {
+  background-color: $footer-background;
+}
+
+.container {
+  padding: 0 2rem;
+  max-width: 70rem;
+  margin: 0 auto;
 }

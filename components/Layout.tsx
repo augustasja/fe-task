@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React from 'react'
-import styles from '../styles/Home.module.scss'
 
 type Props = {
     children: React.ReactNode
@@ -15,11 +14,14 @@ const Layout = ({ children }: Props) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             {/* navbar */}
-            <main className={styles.main}>
+            <header>
+                <div className="container">
+                    xgadg
+                </div>
+            </header>
                 {children}
-            </main>
-            <footer className={styles.footer}>
-                <div className={styles.container}>asgag</div>
+            <footer>
+                <div className="container">asgag</div>
             </footer>
         </>
     )
