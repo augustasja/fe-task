@@ -1,5 +1,28 @@
 .landing-page {
     .main-section {
-        background-color: $base-background;
+        background-color: $main-background;
+        padding: 4rem 0;
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15%;
+        }
+
+        & .left {
+            height: 40rem;
+            background-color: #F8F4F9;
+            border-radius: 16px;
+            border: 1px solid;
+        }
+
+        & .left, .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 42.5%;
+            flex-direction: column;
+        }
     }
 }

@@ -5,7 +5,15 @@ const Home: NextPage = () => {
     <main className="landing-page">
       <section className="main-section">
         <div className="container">
-          lasbasdien
+          <div className="wrapper">
+            <div className="left">form</div>
+            <div className="right">asf</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          taegfea
         </div>
       </section>
     </main>
