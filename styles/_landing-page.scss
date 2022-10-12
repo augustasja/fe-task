@@ -28,6 +28,17 @@
         p {
             font: 16px/26px Noto Sans;
         }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                padding: 1rem 0;
+                border: 1px solid $base-border;
+                border-radius: 8px;
+            }
+        }
     }
 
     .main-section {

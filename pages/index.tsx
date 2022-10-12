@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Form from "../components/Form"
 
 const Home: NextPage = () => {
   return (
@@ -7,15 +8,7 @@ const Home: NextPage = () => {
         <div className="container">
           <div className="wrapper">
             <div className="left">
-              <div className="form">
-                <div className="form-content">
-                  <h1>Refer friends and get rewards</h1>
-                  <p>Refer your friends to us and earn hotel booking vouchers. We'll give you 1 coin for each friend that installs our extension. Minimum cash-out at 20 coins.</p>
-                </div>
-                <div className="form-footer">
-                  <span>Limits on max rewards apply.</span>
-                </div>
-              </div>
+                <Form />
             </div>
             <div className="right">asf</div>
           </div>
