@@ -29,7 +29,7 @@
         }
 
         p {
-            font: 16px/26px Noto Sans;
+            font: 1rem/26px Noto Sans;
             margin-bottom: 3rem;
             margin-top: 0;
         }
@@ -82,6 +82,18 @@
             position: relative;
             margin-top: 4rem;
 
+            & .referral-link-confirmation {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 1rem;
+
+                span {
+                    padding-left: 1rem;
+                }
+            }
+
             input {
                 width: 100%;
                 &[readonly] {
@@ -96,6 +108,8 @@
                 border-bottom-left-radius: 0;
                 padding: 1rem 1.5rem;
                 margin-top: 0;
+                transform: none;
+                transition: none;
             }
         }
     }

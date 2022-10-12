@@ -96,7 +96,7 @@ footer {
   border: 1px solid $base-border;
   color: white;
   margin-top: 1rem;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: $btn-primary;
   outline: $base-border;
   cursor: pointer;
@@ -110,11 +110,11 @@ footer {
 input {
   padding: 1rem 0;
   border: 1px solid $base-border;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   outline: $base-border;
 
   &::placeholder, &[type=text] {
-      font-size: 16px;
+      font-size: 1rem;
       color: $secondary-text;
   }
 }

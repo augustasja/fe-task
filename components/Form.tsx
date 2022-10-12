@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
+import Image from "next/image";
 
 type FormData = {
     requiredEmail: string,
@@ -34,7 +35,7 @@ const Form = () => {
                 <h1>Refer friends and get rewards</h1>
                 <p>Refer your friends to us and earn hotel booking vouchers. We'll give you 1 coin for each friend that installs our extension. Minimum cash-out at 20 coins.</p>
                 {
-                    !isLoading ?
+                    isLoading ?
                         <form onSubmit={onSubmit}>
                             <span className="error">{errors.requiredEmail && errors.requiredEmail.message}</span>
                             <div className="img-wrp">
@@ -51,10 +52,14 @@ const Form = () => {
                         </form>
                         :
                         <div className="referral-link">
+                            <div className="referral-link-confirmation">
+                                <Image src="/assets/success.svg" alt="email-success" height={26} width={26} />
+                                <span>Your email is confirmed!</span>
+                            </div>
                             <input type="text" value={REFERRAL_LINK} readOnly />
                             <button className="btn-primary">Copy</button>
                         </div>
-                        }
+                }
             </div>
             <div className="form-footer">
                 <span>Limits on max rewards apply.</span>
