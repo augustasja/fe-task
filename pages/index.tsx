@@ -5,13 +5,11 @@ const Home: NextPage = () => {
   return (
     <main className="landing-page">
       <section className="main-section">
-        <div className="container">
-          <div className="wrapper">
-            <div className="left">
-                <Form />
-            </div>
-            <div className="right">asf</div>
+        <div className="container wrapper">
+          <div className="left">
+            <Form />
           </div>
+          <div className="right">asf</div>
         </div>
       </section>
       <section>

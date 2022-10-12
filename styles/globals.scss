@@ -90,6 +90,23 @@ footer {
   display: none;
 }
 
+.btn-primary {
+  padding: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid $base-border;
+  color: white;
+  margin-top: 1rem;
+  font-size: 16px;
+  background-color: $btn-primary;
+  outline: $base-border;
+  cursor: pointer;
+  transition: transform ease-in-out .2s;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
 .hamburger {
   @media(min-width: 1120px) {
     display: none;

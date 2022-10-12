@@ -1,18 +1,15 @@
 .landing-page {
 
-    .form {
+    .referral-form {
         height: 40rem;
         background-color: #F8F4F9;
         border-radius: 16px;
         border: 1px solid;
+        padding: 3rem;
+        text-align: left;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-
-        & .form-content, .form-footer {
-            padding: 3rem;
-            text-align: left;
-        }
+        flex-direction: column;
 
         & .form-footer {
             color: $secondary-text;
@@ -21,22 +18,46 @@
 
         h1 {
             font: 45px/72px Caveat Brush;
-            margin: 0;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
         }
 
         p {
             font: 16px/26px Noto Sans;
+            margin-bottom: 3rem;
+            margin-top: 0;
         }
 
         form {
             display: flex;
             flex-direction: column;
 
+            & .img-wrp {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(1.25rem, 18px);
+                }
+            }
+
             input {
                 padding: 1rem 0;
                 border: 1px solid $base-border;
                 border-radius: 8px;
+                outline: $base-border;
+
+                &::placeholder, &[type=text] {
+                    font-size: 16px;
+                    color: $secondary-text;
+                }
+
+                &[type=text] {
+                    padding-left: 3.5rem;
+                }
             }
         }
     }
@@ -47,6 +68,7 @@
 
         .wrapper {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 15%;
