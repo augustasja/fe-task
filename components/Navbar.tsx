@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import Link from "next/link"
+import Navlist from "./Navlist"
 
 type Props = {}
 
@@ -33,30 +34,10 @@ const Navbar = (props: Props) => {
                             <Image src="/assets/close.svg" alt="hamburger-menu-close" width={18} height={16} />
                     }
                 </div>
-                <ul className="nav-list" id="navbar">
-                    <li className="nav-item">
-                        <a href="">Chrome Extension</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="">Price Comparison</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="">Blog</a>
-                    </li>
-                </ul>
+                <Navlist ulStyle="nav-list" liStyle="nav-item" />
             </div>
             <div className={`container ${isOpen ? 'menu-active' : 'menu-disabled'}`}>
-                <ul>
-                    <li>
-                        <a href="">Chrome Extension</a>
-                    </li>
-                    <li>
-                        <a href="">Price Comparison</a>
-                    </li>
-                    <li>
-                        <a href="">Blog</a>
-                    </li>
-                </ul>
+                <Navlist />
             </div>
         </nav>
     )
