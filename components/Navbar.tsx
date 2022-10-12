@@ -45,7 +45,7 @@ const Navbar = (props: Props) => {
                     </li>
                 </ul>
             </div>
-            <div className={`menu ${isOpen ? 'menu-active' : 'menu-disabled'}`}>
+            <div className={`container ${isOpen ? 'menu-active' : 'menu-disabled'}`}>
                 <ul>
                     <li>
                         <a href="">Chrome Extension</a>

@@ -23,7 +23,8 @@ a {
 }
 
 header {
-  background-color: #FFFF;;
+  background-color: #FFFF;
+  border-bottom: 1px solid $base-border;
 }
 
 main {
@@ -55,24 +56,37 @@ footer {
       font-size: 20px;
     }
 
-    @media( max-width: 1120px ) {
+    @media(max-width: 1120px) {
       display: none;
     }
   }
 }
 
-.menu {
-  background-color: aqua;
-  &.menu-active {
-    display: block;
-  }
-  &.menu-disabled {
-    display: none;
+.menu-active {
+  display: block;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid $base-border;
+
+  ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+
+    li {
+      padding: 1rem 0;
+    }
   }
 }
 
+.menu-disabled {
+  display: none;
+}
+
 .hamburger {
-  @media(	min-width: 1120px ) {
+  @media(min-width: 1120px) {
     display: none;
   }
 }
