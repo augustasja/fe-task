@@ -6,6 +6,7 @@ type FormData = {
 }
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const REFERRAL_LINK = 'https://ratepunk.com/referral';
 
 const Form = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
@@ -33,7 +34,7 @@ const Form = () => {
                 <h1>Refer friends and get rewards</h1>
                 <p>Refer your friends to us and earn hotel booking vouchers. We'll give you 1 coin for each friend that installs our extension. Minimum cash-out at 20 coins.</p>
                 {
-                    isLoading ?
+                    !isLoading ?
                         <form onSubmit={onSubmit}>
                             <span className="error">{errors.requiredEmail && errors.requiredEmail.message}</span>
                             <div className="img-wrp">
@@ -48,8 +49,12 @@ const Form = () => {
                             })} />
                             <button className="btn-primary" type="submit">Get Referral Link</button>
                         </form>
-                        : <span>success</span>
-                }
+                        :
+                        <div className="referral-link">
+                            <input type="text" value={REFERRAL_LINK} readOnly />
+                            <button className="btn-primary">Copy</button>
+                        </div>
+                        }
             </div>
             <div className="form-footer">
                 <span>Limits on max rewards apply.</span>

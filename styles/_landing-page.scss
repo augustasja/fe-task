@@ -1,5 +1,4 @@
 .landing-page {
-
     .referral-form {
         height: 40rem;
         background-color: #F8F4F9;
@@ -55,6 +54,49 @@
             justify-content: center;
             flex: 1 0 42.5%;
             flex-direction: column;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            & .img-wrp {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(1.25rem, 20px);
+                }
+            }
+
+            input {
+                &[type=text] {
+                    padding-left: 3.5rem;
+                }
+            }
+        }
+
+        .referral-link {
+            position: relative;
+            margin-top: 4rem;
+
+            input {
+                width: 100%;
+                &[readonly] {
+                    padding-left: 1rem;
+                }
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                padding: 1rem 1.5rem;
+                margin-top: 0;
+            }
         }
     }
 }
