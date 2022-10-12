@@ -107,6 +107,38 @@ footer {
   }
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+
+  & .img-wrp {
+      position: relative;
+
+      img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(1.25rem, 18px);
+      }
+  }
+
+  input {
+      padding: 1rem 0;
+      border: 1px solid $base-border;
+      border-radius: 8px;
+      outline: $base-border;
+
+      &::placeholder, &[type=text] {
+          font-size: 16px;
+          color: $secondary-text;
+      }
+
+      &[type=text] {
+          padding-left: 3.5rem;
+      }
+  }
+}
+
 .hamburger {
   @media(min-width: 1120px) {
     display: none;
