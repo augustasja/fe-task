@@ -3,14 +3,14 @@ import Image from "next/image"
 import Link from "next/link"
 import Navlist from "./Navlist"
 
-type Props = {}
+const MEDIA_BREAKPOINT = 1081
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     useEffect(() => {
         const handleWindowResize = () => {
-            window.innerWidth < 1120 && setIsOpen(false);
+            window.innerWidth < MEDIA_BREAKPOINT && setIsOpen(false);
         }
 
         window.addEventListener('resize', handleWindowResize);

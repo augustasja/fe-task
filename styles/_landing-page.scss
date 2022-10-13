@@ -40,18 +40,14 @@
         .wrapper {
             display: flex;
             flex-wrap: wrap;
-            // justify-content: space-between;
             justify-content: center;
-            // align-items: center;
             gap: 15%;
         }
 
         & .left,
         .right {
             display: flex;
-            // justify-content: center;
             flex: 1 0 42.5%;
-            // flex-direction: column;
         }
 
         form {
@@ -97,7 +93,7 @@
                 width: 100%;
 
                 &[readonly] {
-                    padding-left: 1rem;
+                    padding: 1rem;
                 }
             }
 
@@ -114,7 +110,6 @@
         }
 
         .step-section {
-            // width: 30rem;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -124,7 +119,6 @@
             & .third-step {
                 display: flex;
                 align-items: center;
-                flex-wrap: wrap;
             }
 
             & .step-content {
@@ -143,6 +137,17 @@
                 .step-header {
                     font: 32px/48px Caveat Brush;
                     margin: 0;
+
+                    @media(max-width: 1081px) {
+                        margin: 1rem 0;
+                    }
+                }
+
+                @media(max-width: 1081px) {
+                    width: auto;
+                    text-align: center;
+                    margin-left: 0;
+                    margin: 2rem 0;
                 }
             }
 
@@ -152,6 +157,23 @@
                 & .step-content {
                     margin-left: 0;
                     margin-right: 2rem;
+
+                    @media(max-width: 1081px) {
+                        margin-right: 0;
+                    }
+                }
+
+                @media(max-width: 1081px) {
+                    flex-direction: column;
+                    margin: 1rem 0;
+                }
+            }
+
+            & .third-step {
+                & .step-content {
+                    @media(max-width: 1081px) {
+                        margin-bottom: 0px
+                    }
                 }
             }
         }
@@ -205,6 +227,79 @@
             & .rating {
                 letter-spacing: 5px;
                 margin-right: 1rem;
+            }
+        }
+    }
+
+    @media(max-width: 1081px) {
+        .referral-form {
+            padding: 2rem 1rem;
+
+            h1 {
+                font: 32px/48px Caveat Brush;
+            }
+
+            & .form-content {
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            & .form-footer {
+                margin-top: 5rem;
+            }
+        }
+
+        .main-section {
+            & .left, & .right {
+                flex-basis: 100%;
+            }
+            padding: 2rem 0;
+
+            .referral-link {
+                margin-top: 0rem;
+                & .referral-link-confirmation {
+                    font-size: 1rem;
+                }
+
+                button {
+                    position: relative;
+                    border-radius: 8px;
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .step-section {
+            & .first-step, & .second-step, & .third-step {
+                justify-content: center;
+                flex-direction: column;
+            }
+            flex-basis: 100%;
+                padding-top: 2rem;
+        }
+
+        .store-section {
+
+            & .wrapper {
+                justify-content: center;
+            }
+
+            .store-block {
+                margin: 0.5rem;
+            }
+            .store-reviews {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media(max-width: 972px) {
+        .store-section {
+            .store-reviews {
+                margin-top: 1rem;
+                // font-size: 1rem;
             }
         }
     }

@@ -46,25 +46,26 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="footer-social">
-                            <p className="footer-title">Social</p>
-                            <a className="social-button" target="_blank" href="">
-                                <Image src="/assets/instagram.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
-                            </a>
-                            <a className="social-button" target="_blank" href="">
-                                <Image src="/assets/facebook.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
-                            </a>
-                            <a className="social-button" target="_blank" href="">
-                                <Image src="/assets/linkedin.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
-                            </a>
-                            <a className="social-button" target="_blank" href="">
-                                <Image src="/assets/twitter.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
-                            </a>
-                            <a className="social-button" target="_blank" href="">
-                                <Image src="/assets/tiktok.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
-                            </a>
+                        <p className="footer-title">Social</p>
+                        <a className="social-button" target="_blank" href="">
+                            <Image src="/assets/instagram.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
+                        </a>
+                        <a className="social-button" target="_blank" href="">
+                            <Image src="/assets/facebook.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
+                        </a>
+                        <a className="social-button" target="_blank" href="">
+                            <Image src="/assets/linkedin.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
+                        </a>
+                        <a className="social-button" target="_blank" href="">
+                            <Image src="/assets/twitter.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
+                        </a>
+                        <a className="social-button" target="_blank" href="">
+                            <Image src="/assets/tiktok.svg" alt="ratepunk-instagram" width={16} height={16} layout="fixed" />
+                        </a>
                     </div>
                 </div>
             </div>
+                <p className="footer-copyright-mobile">© 2021 Ratepunk. All Rights Reserved.</p>
         </div>
     )
 }
