@@ -29,6 +29,13 @@ const Form = () => {
         await response.json();
     }
 
+    const handleCopyToClipboard = () => {
+        navigator.clipboard.writeText(REFERRAL_LINK)
+            .then(() => {
+                alert('Copied to clipbaord'); // Call toast
+            });
+    }
+
     return (
         <div className="referral-form">
             <div className="form-content">
@@ -57,7 +64,7 @@ const Form = () => {
                                 <span>Your email is confirmed!</span>
                             </div>
                             <input type="text" value={REFERRAL_LINK} readOnly />
-                            <button className="btn-primary">Copy</button>
+                            <button className="btn-primary" onClick={handleCopyToClipboard}>Copy</button>
                         </div>
                 }
             </div>
