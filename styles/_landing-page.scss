@@ -159,9 +159,14 @@
 
     .store-section {
         background-color: $secondary-background;
-        display: flex;
-        justify-content: space-between;
         padding: 1.75rem 0;
+
+        & .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
         .store-block {
             display: inline-flex;
@@ -188,7 +193,19 @@
                     font-weight: 400;
                 }
             }
+        }
 
+        .store-reviews {
+            color: white;
+            font-size: 20px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+
+            & .rating {
+                letter-spacing: 5px;
+                margin-right: 1rem;
+            }
         }
     }
 }

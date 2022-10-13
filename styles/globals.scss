@@ -33,7 +33,81 @@ main {
 
 footer {
   background-color: $third-background;
-  height: 20rem;
+
+  &.footer {
+    padding: 4rem 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-copyright {
+  color: $secondary-text;
+}
+
+.footer-info {
+  flex: 1 0 50%;
+  justify-content: space-between;
+}
+
+.footer-title {
+  margin-top: 0;
+  font: normal normal bold 20px/24px Noto Sans;
+  text-transform: uppercase;
+}
+
+.footer-contact-link {
+  padding-top: 0.75rem;
+
+  span {
+    padding-left: 1rem;
+  }
+}
+
+.footer-links {
+  flex: 1 0 25%;
+
+  ul {
+    padding-left: 0;
+    margin-top: 0;
+
+    & li {
+      list-style: none;
+      padding: 0.75rem 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social {
+  margin-bottom: 1rem;
+}
+
+.footer-contact-social {
+  flex: 1 0 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
@@ -107,15 +181,28 @@ footer {
   }
 }
 
+.social-button {
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid $base-border;
+  background-color: $btn-primary;
+  padding: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
 input {
   padding: 1rem 0;
   border: 1px solid $base-border;
   border-radius: 0.5rem;
   outline: $base-border;
 
-  &::placeholder, &[type=text] {
-      font-size: 1rem;
-      color: $secondary-text;
+  &::placeholder,
+  &[type=text] {
+    font-size: 1rem;
+    color: $secondary-text;
   }
 }
 

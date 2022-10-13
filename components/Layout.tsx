@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Navbar from '../components/Navbar';
+import Footer from "./Footer";
 
 type Props = {
     children: React.ReactNode
@@ -17,8 +18,8 @@ const Layout = ({ children }: Props) => {
                 <Navbar />
             </header>
             {children}
-            <footer>
-                <div className="container">asgag</div>
+            <footer className="footer">
+                <Footer />
             </footer>
         </>
     )

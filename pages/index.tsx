@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Form from "../components/Form"
 import Steps from "../components/Steps"
-import Image from "next/image"
+import StoreBlock from "../components/StoreBlock"
 
 const Home: NextPage = () => {
   return (
@@ -18,13 +18,18 @@ const Home: NextPage = () => {
       </section>
       <section className="store-section">
         <div className="container wrapper">
-          <a className="store-block" href="">
-            <Image src="/assets/chrome.svg" alt="chrome-store" width="65" height="58" layout="fixed"/>
-            <div className="store-content">
-              <span className="store-title-1">available in the</span>
-              <span className="store-title-2">chrome web store</span>
+          <StoreBlock
+            link="https://chrome.google.com/webstore/detail/ratepunk-same-hotel-way-c/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk"
+            place="chrome web store"
+            logo={{ src: '/assets/chrome.svg' , width: 65, height: 58 }} />
+          <StoreBlock
+            link="https://apps.apple.com/app/ratepunk/id1607823726"
+            place="apple app store"
+            logo={{ src: '/assets/apple.svg' , width: 65, height: 58 }} />
+            <div className="store-reviews">
+              <span className="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>Chrome store reviews</span>
             </div>
-          </a>
         </div>
       </section>
     </main>

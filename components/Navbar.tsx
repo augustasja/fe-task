@@ -23,7 +23,7 @@ const Navbar = (props: Props) => {
             <div className="container nav">
                 <Link href="/">
                     <a>
-                        <Image src="/assets/logo.svg" alt="logo" width={125} height={32} />
+                        <Image src="/assets/logo.svg" alt="ratepunk-logo" width={125} height={32} layout="fixed" />
                     </a>
                 </Link>
                 <div onClick={() => setIsOpen(!isOpen)} className="hamburger">
