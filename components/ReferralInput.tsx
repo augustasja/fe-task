@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image"
+import toast from "react-hot-toast";
 
 type Props = {}
 
@@ -10,7 +11,9 @@ const ReferralInput = (props: Props) => {
     const handleCopyToClipboard = () => {
         navigator.clipboard.writeText(REFERRAL_LINK)
             .then(() => {
-                alert('Copied to clipbaord'); // Call toast
+                toast.success('Copied to clipboard!', {
+                    id: 'successToast'
+                });
             });
     }
 
