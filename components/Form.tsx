@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
-import Image from "next/image";
+import ReferralInput from './ReferralInput'
 
 type FormData = {
     requiredEmail: string,
 }
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const REFERRAL_LINK = 'https://ratepunk.com/referral';
 
 const Form = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
@@ -27,13 +26,6 @@ const Form = () => {
         });
 
         await response.json();
-    }
-
-    const handleCopyToClipboard = () => {
-        navigator.clipboard.writeText(REFERRAL_LINK)
-            .then(() => {
-                alert('Copied to clipbaord'); // Call toast
-            });
     }
 
     return (
@@ -58,14 +50,7 @@ const Form = () => {
                             <button className="btn-primary" type="submit">Get Referral Link</button>
                         </form>
                         :
-                        <div className="referral-link">
-                            <div className="referral-link-confirmation">
-                                <Image src="/assets/success.svg" alt="email-success" height={26} width={26} />
-                                <span>Your email is confirmed!</span>
-                            </div>
-                            <input type="text" value={REFERRAL_LINK} readOnly />
-                            <button className="btn-primary" onClick={handleCopyToClipboard}>Copy</button>
-                        </div>
+                        <ReferralInput />
                 }
             </div>
             <div className="form-footer">
