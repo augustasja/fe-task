@@ -95,6 +95,7 @@
 
             input {
                 width: 100%;
+
                 &[readonly] {
                     padding-left: 1rem;
                 }
@@ -118,15 +119,12 @@
             flex-direction: column;
             justify-content: space-around;
 
-            & .first-step, & .second-step, & .third-step {
+            & .first-step,
+            & .second-step,
+            & .third-step {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-            }
-
-            & .step-logo {
-                // width: 9rem;
-                // height: 9rem;
             }
 
             & .step-content {
@@ -139,6 +137,7 @@
                     letter-spacing: 1.6px;
                     color: $subtitle;
                     font-weight: 500;
+                    text-transform: uppercase;
                 }
 
                 .step-header {
@@ -155,6 +154,41 @@
                     margin-right: 2rem;
                 }
             }
+        }
+    }
+
+    .store-section {
+        background-color: $secondary-background;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.75rem 0;
+
+        .store-block {
+            display: inline-flex;
+            border: 1px solid $base-border;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            border-radius: 16px;
+            padding-right: 3rem;
+        }
+
+        .store-content {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.75rem;
+
+            span {
+                color: white;
+                font-size: 20px;
+                line-height: 25px;
+                font-weight: 500;
+
+                &:first-child {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+
         }
     }
 }
