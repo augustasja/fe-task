@@ -1,15 +1,10 @@
 .landing-page {
     .referral-form {
-        height: 40rem;
         background-color: #F8F4F9;
         border-radius: 16px;
         border: 1px solid;
         padding: 3rem;
         text-align: left;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        width: 28rem;
 
         & .error {
             font-size: 12px;
@@ -20,6 +15,7 @@
         & .form-footer {
             color: $secondary-text;
             font-size: 14px;
+            margin-top: 7rem;
         }
 
         h1 {
@@ -47,14 +43,14 @@
             // justify-content: space-between;
             justify-content: center;
             // align-items: center;
-            gap: 10%;
+            gap: 15%;
         }
 
         & .left,
         .right {
             display: flex;
             // justify-content: center;
-            flex: 1 0 45%;
+            flex: 1 0 42.5%;
             // flex-direction: column;
         }
 
@@ -76,6 +72,7 @@
             input {
                 &[type=text] {
                     padding-left: 3.5rem;
+                    padding-right: 3.5rem;
                 }
             }
         }
@@ -124,24 +121,38 @@
             & .first-step, & .second-step, & .third-step {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
             }
 
             & .step-logo {
-                width: 9rem;
-                height: 9rem;
+                // width: 9rem;
+                // height: 9rem;
             }
 
-            & .step-description {
+            & .step-content {
                 width: 16rem;
-                margin-left: 1rem;
+                margin-left: 2rem;
+
+                .step-count {
+                    font-size: 20px;
+                    line-height: 32px;
+                    letter-spacing: 1.6px;
+                    color: $subtitle;
+                    font-weight: 500;
+                }
+
+                .step-header {
+                    font: 32px/48px Caveat Brush;
+                    margin: 0;
+                }
             }
 
             & .second-step {
                 flex-direction: row-reverse;
 
-                & .step-description {
+                & .step-content {
                     margin-left: 0;
-                    margin-right: 1rem;
+                    margin-right: 2rem;
                 }
             }
         }

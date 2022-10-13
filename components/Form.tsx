@@ -36,7 +36,10 @@ const Form = () => {
                 {
                     isLoading ?
                         <form onSubmit={onSubmit}>
-                            <span className="error">{errors.requiredEmail && errors.requiredEmail.message}</span>
+                            {
+                                errors.requiredEmail && errors.requiredEmail.message &&
+                                <span className="error">{errors.requiredEmail.message}</span>
+                            }
                             <div className="img-wrp">
                                 <img src="/assets/email.svg" alt="email" height={16} width={20} />
                             </div>
