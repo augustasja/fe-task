@@ -16,24 +16,26 @@ const Footer = () => {
                     <p className="footer-copyright">© 2021 Ratepunk. All Rights Reserved.</p>
                 </div>
                 <div className="footer-links">
-                    <p className="footer-title">Quick Links</p>
-                    <ul>
-                        <li>
-                            <Link href="">Price Comparison</Link>
-                        </li>
-                        <li>
-                            <a target="_blank" href="">Chrome Extension</a>
-                        </li>
-                        <li>
-                            <Link href="">How It Works</Link>
-                        </li>
-                        <li>
-                            <Link href="">Ratepunk Blog</Link>
-                        </li>
-                        <li>
-                            <Link href="">Privacy Policy</Link>
-                        </li>
-                    </ul>
+                    <div>
+                        <p className="footer-title">Quick Links</p>
+                        <ul>
+                            <li>
+                                <Link href="">Price Comparison</Link>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">Chrome Extension</a>
+                            </li>
+                            <li>
+                                <Link href="">How It Works</Link>
+                            </li>
+                            <li>
+                                <Link href="">Ratepunk Blog</Link>
+                            </li>
+                            <li>
+                                <Link href="">Privacy Policy</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="footer-contact-social">
                     <div className="footer-contact">
