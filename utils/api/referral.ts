@@ -10,7 +10,3 @@ export const postEmail = async (body: string) => {
         .then(data => data.record.body)
         .catch(error => error);
 }
-
-export const getEmail = async () => {
-
-}
