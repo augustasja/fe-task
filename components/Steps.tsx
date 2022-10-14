@@ -24,7 +24,7 @@ const Steps = () => {
                 <Image src="/assets/voucher.svg" alt="invite" width={144} height={107} layout="fixed" />
                 <div className="step-content">
                     <span className="step-count">Step 3</span>
-                    <h2 className="step-header">Collect Coins</h2>
+                    <h2 className="step-header">Get Voucher</h2>
                     <p className="step-description">Redeem for a $20 hotel booking voucher once you collect 20 coins.</p>
                 </div>
             </div>

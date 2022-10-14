@@ -137,6 +137,7 @@
                 .step-header {
                     font: 32px/48px Caveat Brush;
                     margin: 0;
+                    text-transform: uppercase;
 
                     @media(max-width: 1081px) {
                         margin: 1rem 0;
@@ -165,7 +166,6 @@
 
                 @media(max-width: 1081px) {
                     flex-direction: column;
-                    margin: 1rem 0;
                 }
             }
 
@@ -251,13 +251,17 @@
         }
 
         .main-section {
-            & .left, & .right {
+
+            & .left,
+            & .right {
                 flex-basis: 100%;
             }
+
             padding: 2rem 0;
 
             .referral-link {
                 margin-top: 0rem;
+
                 & .referral-link-confirmation {
                     font-size: 1rem;
                 }
@@ -272,12 +276,16 @@
         }
 
         .step-section {
-            & .first-step, & .second-step, & .third-step {
+
+            & .first-step,
+            & .second-step,
+            & .third-step {
                 justify-content: center;
                 flex-direction: column;
             }
+
             flex-basis: 100%;
-                padding-top: 2rem;
+            padding-top: 2rem;
         }
 
         .store-section {
@@ -289,6 +297,7 @@
             .store-block {
                 margin: 0.5rem;
             }
+
             .store-reviews {
                 font-size: 1rem;
             }
@@ -299,7 +308,6 @@
         .store-section {
             .store-reviews {
                 margin-top: 1rem;
-                // font-size: 1rem;
             }
         }
     }
