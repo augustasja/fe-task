@@ -24,7 +24,6 @@ a {
 
 header {
   background-color: #FFFF;
-  border-bottom: 1px solid $base-border;
 }
 
 main {
@@ -226,7 +225,7 @@ input {
   }
 
   .nav {
-    height: 3.25rem;
+    height: rem;
   }
 
   footer {
