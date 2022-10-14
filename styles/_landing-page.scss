@@ -106,10 +106,6 @@
                 margin-top: 0;
                 transform: none;
                 transition: none;
-
-                &:after {
-                    content: ' URL',
-                }
             }
         }
 
@@ -284,6 +280,10 @@
                     border-radius: 8px;
                     width: 100%;
                     margin-top: 1rem;
+
+                    &:after {
+                        content: ' URL',
+                    }
                 }
             }
         }
