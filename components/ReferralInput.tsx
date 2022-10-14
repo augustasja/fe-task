@@ -1,12 +1,9 @@
-import React from 'react'
 import Image from "next/image"
 import toast from "react-hot-toast";
 
-type Props = {}
-
 const REFERRAL_LINK = 'https://ratepunk.com/referral';
 
-const ReferralInput = (props: Props) => {
+const ReferralInput = () => {
 
     const handleCopyToClipboard = () => {
         navigator.clipboard.writeText(REFERRAL_LINK)
