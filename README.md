@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-- Rename ```.env.local.example``` to ```.env.local``` and enter your JSONBIN.io X-MASTER-KEY. ```Note the comments```
+- Rename ```.env.local.example``` to ```.env.local``` and enter your JSONBIN.io ```X-MASTER-KEY```. ```Note the comments```
 - Install dependencies: ```npm i```
 - Run the development server: ```npm run dev```
 
