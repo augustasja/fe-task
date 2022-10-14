@@ -3,6 +3,11 @@ import Form from "../components/Form"
 import Steps from "../components/Steps"
 import StoreBlock from "../components/StoreBlock"
 
+const meta = {
+  title: 'Ratepunk',
+  description: 'Ratepunk homepage'
+}
+
 const Home: NextPage = () => {
   return (
     <main className="landing-page">
@@ -36,4 +41,5 @@ const Home: NextPage = () => {
   )
 }
 
+Home.defaultProps = meta;
 export default Home
