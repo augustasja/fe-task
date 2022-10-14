@@ -176,6 +176,15 @@
                     }
                 }
             }
+
+            & .step-description {
+                font-size: 20px;
+                line-height: 2rem;
+
+                @media(max-width: 978px) {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 
