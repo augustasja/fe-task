@@ -6,7 +6,7 @@ type FormData = {
     requiredEmail: string,
 }
 
-const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const Form = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
