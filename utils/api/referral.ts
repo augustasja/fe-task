@@ -8,5 +8,5 @@ export const postEmail = async (body: string) => {
         }
     }).then(res => res.json())
         .then(data => data.record.body)
-        .catch(error => error);
+        .catch(error => { throw error.message });
 }

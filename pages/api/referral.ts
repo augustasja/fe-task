@@ -4,19 +4,31 @@ import { postEmail } from "../../utils/api/referral";
 
 type ResponseData = {
     message: string,
-    value: Object
 }
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<ResponseData>
 ) {
-    const email = req.body.email;
+    let email = req.body.email;
 
-    const responseValue = await postEmail(email);
+    if (!email) {
+        res.status(400).send({
+            message: "No email was provided",
+        });
 
-    res.status(201).json({
-        message: 'Email successfully submited',
-        value: responseValue
-    });
+        return
+    }
+
+    try {
+        await postEmail(email);
+
+        res.status(201).send({
+            message: 'Email successfully submitted',
+        });
+    } catch (error) {
+        res.status(500).send({
+            message: error as string
+        });
+    }
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useForm } from "react-hook-form";
 import ReferralInput from './ReferralInput'
+import toast from "react-hot-toast";
 
 type FormData = {
     requiredEmail: string,
@@ -13,19 +14,26 @@ const Form = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const onSubmit = handleSubmit(async data => {
-        await submitEmail(data.requiredEmail).finally(() => setIsLoading(false));
+        await submitEmail(data.requiredEmail);
     });
 
     const submitEmail = async (email: string) => {
-        const response = await fetch('/api/referral', {
+        await fetch('/api/referral', {
             method: 'POST',
             body: JSON.stringify({ email }),
             headers: {
                 'Content-Type': 'application/json'
             }
-        });
+        }).then(res => {
+            if (res.status === 400 || res.status === 500) {
+                toast.error('Something went wrong', {
+                    id: 'error'
+                })
 
-        await response.json();
+                return;
+            }
+            setIsLoading(false)
+        });
     }
 
     return (
