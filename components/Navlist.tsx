@@ -5,17 +5,17 @@ type Props = {
     liStyle?: string
 }
 
-const Navlist = (props: Props) => {
+const Navlist = ({ulStyle, liStyle}: Props) => {
     return (
         <>
-            <ul className={props.ulStyle}>
-                <li className={props.liStyle}>
+            <ul className={ulStyle}>
+                <li className={liStyle}>
                     <a target="_blank" rel="noreferrer nofollow" href="https://chrome.google.com/webstore/detail/ratepunk-same-hotel-way-c/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk">Chrome Extension</a>
                 </li>
-                <li className={props.liStyle}>
+                <li className={liStyle}>
                     <a href="">Price Comparison</a>
                 </li>
-                <li className={props.liStyle}>
+                <li className={liStyle}>
                     <a href="">Blog</a>
                 </li>
             </ul>

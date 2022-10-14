@@ -11,13 +11,13 @@ type Props = {
     }
 }
 
-const StoreBlock = (props: Props) => {
+const StoreBlock = ({link, place, logo}: Props) => {
     return (
-        <a className="store-block" href={props.link}>
-            <Image src={props.logo.src} alt="chrome-store" width={props.logo.width} height={props.logo.height} layout="fixed" />
+        <a className="store-block" href={link}>
+            <Image src={logo.src} alt="chrome-store" width={logo.width} height={logo.height} layout="fixed" />
             <div className="store-content">
                 <span className="store-title-1">available in the</span>
-                <span className="store-title-2">{props.place}</span>
+                <span className="store-title-2">{place}</span>
             </div>
         </a>
     )
